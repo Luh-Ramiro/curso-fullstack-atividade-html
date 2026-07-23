@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contador de Likes</title>
+</head>
+<body>
+  <h1 id="qtdCurtidas">Curtidas: 0</h1>
+  <button id="botao">Curtir</button>
+
+
+  <script>
+      const quantidadesCurtidas = document.querySelector("#qtdCurtidas");
+      const botao = document.querySelector("#botao");
+      let curtidas = 0;
+        
+      // Vou ter um evento que fica "ouvindo" o clique do botão
+      botao.addEventListener("click", () => {
+        curtidas++;
+        quantidadesCurtidas.textContent = `Curtidas: ${curtidas}`
+      });
+
+  </script>
+
+</body>
+</html>
